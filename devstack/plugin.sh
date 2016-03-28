@@ -60,8 +60,9 @@ function uninstall_zeromq {
 }
 
 function start_zeromq {
-    echo_summary "Starting zeromq broker"
-    run_process 0mq "$OSLO_BIN_DIR/oslo-messaging-zmq-broker"
+    echo_summary "Starting zeromq proxy"
+    run_process 0mq "$OSLO_BIN_DIR/oslo-messaging-zmq-proxy"
+    run_process 0mq-router "$OSLO_BIN_DIR/oslo-messaging-zmq-proxy --type ROUTER"
 }
 
 function get_transport_url {
