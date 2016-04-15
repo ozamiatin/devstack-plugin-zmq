@@ -1,4 +1,4 @@
-enable_service 0mq
 enable_service 0mq-router
+enable_service 0mq
 disable_service rabbit
 ZEROMQ_MATCHMAKER=${ZEROMQ_MATCHMAKER:-"redis"}
